@@ -1,9 +1,8 @@
-﻿/*Дана строка.Необходимо вывести в консоль перевёрнутый вариант.Например, "Hello" -> "olleH".*/
+﻿/*Написать функцию, которая создает пустой объект, но без прототипа.*/
 
-let x = "Hello";
-let SumStr = "";
-for (let i = 1; i <= x.length; i++) {
-    SumStr = SumStr + x.slice(x.length - i, x.length - i + 1);
+function EmptyObject(nameEmptyObject) {
+    nameEmptyObject = {};
+    return nameEmptyObject;
 }
-console.log(x);
-console.log(SumStr);
+let myObject = EmptyObject("newObject")
+console.log(myObject);

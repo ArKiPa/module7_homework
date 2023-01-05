@@ -1,19 +1,12 @@
-﻿//Напишите Дана переменная x, которая может принимать любое значение. Написать программу, которая в зависимости от типа данных x выводит в консоль сообщение вида: «x — число».
+﻿//Написать функцию, которая принимает в качестве аргументов строку и объект, а затем проверяет есть ли у переданного объекта свойство с данным именем.Функция должна возвращать true или false.
 
-//Опишите три случая: когда х = числу, строке или логическому типу.В других случаях выводите сообщение: «Тип x не определён».
-
-let x = true
-console.log(x);
-if (typeof (x) == typeof (1)) {
-    console.log("x — число");
-} else {
-    if (typeof (x) == typeof ("1")) {
-        console.log("x — строка");
-    } else {
-        if (typeof (x) == typeof (true)) {
-            console.log("x — логический тип");
-        } else {
-            console.log("Тип x не определён");
+function hasInObject(inputObject, inputKey) {
+    for (let key in inputObject) {
+        if (key == inputKey) {
+            return true;
         }
     }
+    return false;
 }
+let obj = { name: "Ivan", student: true };
+console.log(hasInObject(obj, "student"));
