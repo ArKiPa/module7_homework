@@ -6,3 +6,10 @@ function EmptyObject(nameEmptyObject) {
 }
 let myObject = EmptyObject("newObject")
 console.log(myObject);
+
+//Вариант 2
+function EmptyObject(nameEmptyObject) {
+    return nameEmptyObject;
+}
+let myObject = EmptyObject({})
+console.log(myObject);
